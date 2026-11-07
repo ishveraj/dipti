@@ -14,7 +14,11 @@ const routes = [
         component: Home,
     },
     {
-        path: g.base + '404-not-found',
+        path: '/404-not-found',
+        component: NotFound,
+    },
+    {
+        path: '*',
         component: NotFound,
     },
 ];
@@ -22,7 +26,7 @@ const routes = [
 const GlobalContext = createContext();
 export const useGlobal = () => useContext(GlobalContext);
 
-export function App({ url, setSchema }) {
+export function App() {
     const Routes = useRoutes(routes);
 
     // Tabs global signal tracker
@@ -32,11 +36,10 @@ export function App({ url, setSchema }) {
     <CSP whiteList={CSPWhiteList}/>
 
     <GlobalContext.Provider value={{ 
-        setSchema: setSchema,
         tabs,
         setTabs
     }}>
-    <Router url={url}>
+    <Router base={g.base}>
         <MetaProvider>
             <Suspense> 
                 <main>
