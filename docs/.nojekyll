@@ -1,0 +1,20 @@
+# Location of hub folder (MUST end with /)
+HUB_DOMAIN=https://ishveraj.github.io/dipti/
+
+# Staging path (MUST end with /)
+STAGING_PATH=/dipti/
+
+# Production path (MUST end with /)
+PRODUCTION_PATH=/dipti/
+
+# Localhost API token 
+LOCALHOST_API_TOKEN=""
+
+# CORS whitelisting (use comma for more entries)
+CORS_WHITELIST=""
+
+# Language support (single or multiple)
+LANGUAGE_SUPPORT=single
+
+# Node JS app; requires Node support on server (yes or no)
+NODE_APP=no

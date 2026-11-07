@@ -34,7 +34,7 @@ export default defineConfig(() => {
     build: {
       target: 'esnext',
       polyfillDynamicImport: false,
-      outDir: 'dist',
+      outDir: 'docs',
     },
     base: basePath,
     define: {
