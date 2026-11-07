@@ -1,4 +1,6 @@
 @use 'sass:map';
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 
 /**
  * Please ONLY use mixins and CSS variable here
@@ -12,7 +14,7 @@
     'primary'  : #00274e,
     'white-100': #ffffff,
     'white-50': #ced4dc,
-    'black-100': #0b0b0b,
+    'black-100': #212121,
     'black-50' : #1c1c1c,
     'black-0'  : #333333,
     'grey-100' : #293445,
@@ -23,27 +25,22 @@
     'blue-0'   : #8e85f2,
     'red-0'    : #950000,
     'yellow-0' : #cefd11,
+    'text': #3B322C,
+    'text-hard': #212121,
+    'cream': #fdf9f2,
 );
-
-/**
- * Fonts
- */ 
-$fonts : 'GraphikBold', 
-         'GraphikMedium', 
-         'GraphikRegular', 
-         'Poppins-Bold', 
-         'Poppins-Medium', 
-         'Poppins-Regular', 
-         'Poppins-SemiBold';
 
 /**
  * Main body text font
  */ 
 @mixin font-main {
-    font-family: "GraphikRegular", sans-serif;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 
     &.font-bold, .font-bold {
-        font-family: 'GraphikBold', sans-serif;
+        font-weight: 700;
     }
 }
 
@@ -51,10 +48,11 @@ $fonts : 'GraphikBold',
  * <h1> - <h6> font
  */
 @mixin font-headers {
-    font-family: "Poppins-Regular", sans-serif;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 400;
 
     &.font-bold, .font-bold {
-        font-family: 'Poppins-Bold', sans-serif;
+        font-weight: 700;
     }
 }
 
@@ -62,10 +60,13 @@ $fonts : 'GraphikBold',
  * Navigation font
  */
 @mixin font-navigation {
-    font-family: "Poppins-Regular", sans-serif;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 
     &.font-bold, .font-bold {
-        font-family: 'Poppins-Bold', sans-serif;
+        font-weight: 700;
     }
 }
 
@@ -73,7 +74,7 @@ $fonts : 'GraphikBold',
  * Main body & headers text
  */ 
 $body-settings: (
-    'font-color': var(--black-100),
+    'font-color': var(--text),
     'font-size': clamp(1rem, 1.1vw, 1.1rem),
     'line-height': 1.4,
     'letter-spacing': normal,
