@@ -3,6 +3,7 @@
 .modal {
     .modal-content {
         border: none;
+        background-color: var(--cream);
     }
 
     .modal-body {
@@ -15,7 +16,7 @@
         right: 15px;
         z-index: 1000;
         cursor: pointer;
-        background-color: var(--primary);
+        background-color: var(--accent);
         color: var(--white-100);
         border: none;
         width: 2rem;

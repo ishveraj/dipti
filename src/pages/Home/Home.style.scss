@@ -1,7 +1,24 @@
 @use '@/theme' as *;
 
 #page-home {
-    #section-1 {
-        // css for new page
+    .col-box {
+        cursor: pointer;
+        border: 2px solid var(--text);
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: 0.3s all ease;
+
+        p {
+            transition: 0.3s color ease;
+        }
+
+        &:hover {
+            border: 2px solid var(--text-hard);
+            box-shadow: 0 0 20px rgba(31,31,31,0.5);
+
+            p {
+                color: var(--text-hard);
+            }
+        }
     }
 }

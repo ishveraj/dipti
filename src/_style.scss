@@ -28,20 +28,22 @@ h3, .h3 {
 // Button
 .btn {
     color: var(--white-100);
-    background-color: var(--primary);
+    background-color: var(--text);
     padding: 12px 20px;
     font-size: 1rem;
     border-radius: 50px;
     position: relative;
     transition: 0.3s all ease;
 
-    &.dark {
-        background-color: var(--primary);
-        border: none;
+    &.btn-transparent {
+        background-color: transparent;
+        border: 1px solid var(--text);
+        color: var(--text);
     }
 
     &:hover {
-        background-color: var(--red-0);
+        background-color: var(--text-hard);
+        color: var(--white-100);
     }
 }
 

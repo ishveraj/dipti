@@ -1,23 +1,28 @@
 import { Aos } from "@/tools/AOS/AOS";
 import { Meta } from '@/tools/Meta/Meta';
 import { onCleanup, onMount } from "solid-js";
+import { Modal, ModalTrigger } from "@/components/Modals/Modal";
+import { SeventyReasons } from "./SeventyReasons";
 import './Home.style.scss';
 
-const introMessage = [
-  'Well, well, well...look what the cat brought in...',
-  'Oh look...somebody finally showed up...I was about to send a search party...',
-  'Knock knock...who\'s there? Only the prettiest visitor this site has ever had...',
-  'Psst...you\'re not supposed to be here...kidding, you\'re the whole reason I built this...',
-  'Welcome back, gorgeous...I missed you...',
-  'Plot twist...you\'re the main character here. Again...',
-  'Ahem...this is a restricted area...Dipti only, VIPees of all VIPees...',
-  'Oh hello trouble...I mean, hello wife...',
-  'Look who decided to grace me with her presence...finally...',
-  'Access granted...because obviously, who else would it be...',
-  'Brace yourself...you\'re about to be adored, loudly, and with zero chill...',
+const introMessages = [
+  ['Well, well, well...', 'look what the cat brought in...'],
+  ['Oh look...', 'somebody finally showed up...', 'I was about to send a search party...'],
+  ['Knock knock...', 'who\'s there?', 'Only the prettiest baby girl I ever had...'],
+  ['Psst...', 'you\'re not supposed to be here...', 'kidding...', 'you\'re the whole reason I built this...'],
+  ['Welcome back, gorgeous...', 'I missed you...'],
+  ['Breaking news...', 'you\'re the best part of this site...', 'obviously...'],
+  ['Ahem...', 'this is a restricted area ma\'am...', 'you\'ll have to bribe me first...'],
+  ['Oh hello trouble...', 'I mean, hello princess...'],
+  ['Well hello there...', 'miss me already?', 'Such a sweetheart aren\'t you...'],
+  ['Access granted...', 'because obviously, who else would it be...'],
+  ['Warning...', 'you\'re about to be spoiled...', 'adored...', 'tickled...', 'and I\'m going to have zero regrets about it...'],
 ];
 
 export default function Home(){
+  const introMessageRandomIndex = Math.floor(Math.random() * introMessages.length);
+  let afterIntroDelay = 0;
+
   //* On page load
   onMount(() => {
 
@@ -27,7 +32,6 @@ export default function Home(){
   onCleanup(() => {
   });
 
-  
   return <>
   <Meta data={{
     title: `Dear Dipti...This One's For You`,
@@ -39,7 +43,31 @@ export default function Home(){
   <div id="page-home">
     <section id="section-1">
       <div class="container">
-        <h1 class="text-center" data-aos="fade-up">{introMessage[Math.floor(Math.random() * introMessage.length)]}</h1>
+        <h1 class="text-center">
+          <For each={introMessages[introMessageRandomIndex]}>{(v,i) => {
+            afterIntroDelay = i() === 0 ? null : 2000 * i() - 1000;
+
+            return <>
+              <span class="d-block" data-aos="fade-in" data-aos-delay={afterIntroDelay}>
+                {introMessages[introMessageRandomIndex][i()]}
+              </span>
+            </>;
+          }}</For>
+        </h1>
+
+        <div class="mt-5" data-aos="zoom-in" data-aos-delayx={afterIntroDelay + 1500}>
+          <div className="row align-items-center justify-content-center">
+            <div className="col-lg-4 mt-4 text-center">
+              <ModalTrigger target="seventy-reasons-why" class="col-box">
+                <p>70 reasons why me laps you</p>
+              </ModalTrigger>
+
+              <Modal id="seventy-reasons-why" size="large">
+                <SeventyReasons/> 
+              </Modal>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
