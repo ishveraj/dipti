@@ -17,13 +17,13 @@ export default function Home(){
   return <>
   <Meta data={{
     title: `Dear Dipti...This One's For You`,
-    description: `Dipti's personal corner of the internet. Built by Bubu, for Pluplue, with more su-pee-nehs loading...`,
+    description: `Dipti's personal corner of the internet. Built by Bubu, for Pluplue, with more suu-pee-nehs loading...`,
   }}/>
   <Aos/>
 
 
   <div id="page-home">
-    <section id="section-1" class="pt-0">
+    <section id="section-1">
       <div class="container">
         <h1>Well, well, well...look what the cat brought in...</h1>
       </div>
