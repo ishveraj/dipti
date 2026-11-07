@@ -1,0 +1,25 @@
+@use '@/theme' as *;
+@use 'sass:map';
+
+#not-found-page {
+    width: 100%;
+    min-height: calc(100vh - map.get($navbar-settings, 'desktop-height'));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 3rem;
+        line-height: 1.4;
+    }
+
+    .btn {
+        display: inline-block;
+        color: #fff !important;
+        z-index: 1;
+
+        &::before {
+            z-index: -1;
+        }
+    }
+}

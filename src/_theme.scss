@@ -1,0 +1,148 @@
+@use 'sass:map';
+
+/**
+ * Please ONLY use mixins and CSS variable here
+ * For global effects use _style.scss to write CSS
+ */
+
+/**
+ * Theme colors
+ */ 
+ $theme-colors: (
+    'primary'  : #00274e,
+    'white-100': #ffffff,
+    'white-50': #ced4dc,
+    'black-100': #0b0b0b,
+    'black-50' : #1c1c1c,
+    'black-0'  : #333333,
+    'grey-100' : #293445,
+    'grey-50'  : #151c2a,
+    'grey-0'   : #7a7a7a,
+    'success'  : #009A00,
+    'danger'   : #FF0000,
+    'blue-0'   : #8e85f2,
+    'red-0'    : #950000,
+    'yellow-0' : #cefd11,
+);
+
+/**
+ * Fonts
+ */ 
+$fonts : 'GraphikBold', 
+         'GraphikMedium', 
+         'GraphikRegular', 
+         'Poppins-Bold', 
+         'Poppins-Medium', 
+         'Poppins-Regular', 
+         'Poppins-SemiBold';
+
+/**
+ * Main body text font
+ */ 
+@mixin font-main {
+    font-family: "GraphikRegular", sans-serif;
+
+    &.font-bold, .font-bold {
+        font-family: 'GraphikBold', sans-serif;
+    }
+}
+
+/**
+ * <h1> - <h6> font
+ */
+@mixin font-headers {
+    font-family: "Poppins-Regular", sans-serif;
+
+    &.font-bold, .font-bold {
+        font-family: 'Poppins-Bold', sans-serif;
+    }
+}
+
+/**
+ * Navigation font
+ */
+@mixin font-navigation {
+    font-family: "Poppins-Regular", sans-serif;
+
+    &.font-bold, .font-bold {
+        font-family: 'Poppins-Bold', sans-serif;
+    }
+}
+
+/**
+ * Main body & headers text
+ */ 
+$body-settings: (
+    'font-color': var(--black-100),
+    'font-size': clamp(1rem, 1.1vw, 1.1rem),
+    'line-height': 1.4,
+    'letter-spacing': normal,
+    'heading-line-height': 1.4,
+    'heading-letter-spacing': normal,
+    'page-load-color': rgba(255, 255, 255, 1),
+ );
+
+/**
+ * Section y-axis padding
+ * mobile breakpoint determines when to apply mobile-padding
+ */ 
+$section-settings: (
+    'desktop-padding-y': 6rem,
+    'mobile-padding-y' : 4rem,
+    'mobile-breakpoint' : 575px,
+);
+
+/**
+ * Container max size to ensure content size does not extend on bigger screens
+ */ 
+ $container-settings: (
+    'max-xl-width': 1620px, // big desktop screens
+    'max-width' : 1320px, // normal desktop screens
+    'padding-x' : 1.5rem,
+);
+
+/**
+* Navigation
+* Ensure to use correct class in Navbar
+* navbar-expand-md - 767px
+* navbar-expand-lg - 991px
+* navbar-expand-xl - 1199px
+*/ 
+$navbar-mobile-breakpoint : 991px;
+
+$navbar-settings: (
+    'desktop-height' : 100px,
+    'mobile-height' : 70px,
+    'default-link-color' : var(--black-100),
+    'hover-link-color' : var(--black-0),
+    'font-size': map.get($body-settings, 'font-size'),
+    'link-padding-left-right': 20px,
+    'mobile-dropdown-background-color': var(--white-100),
+    'dashboard-width': 300px
+);
+
+/**
+ * Page transition
+ */ 
+@mixin page-transition {
+    /* Exit animation */
+    @keyframes page-exit {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+
+    /* Entrance animation */
+    @keyframes page-enter {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .page-exit {
+        animation: page-exit 0.3s ease forwards;
+        height: 200vh;
+    }
+
+    .page-enter {
+        animation: page-enter 0.3s ease forwards;
+    }
+}

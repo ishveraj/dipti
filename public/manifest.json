@@ -1,0 +1,16 @@
+{
+  "start_url": "/",
+  "name": "Install App",
+  "short_name": "PWA App",
+  "description": "Run this app locally",
+  "background_color": "#000000",
+  "theme_color": "#212121",
+  "icons": [
+    {
+      "src": "https://gaboola.com/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "display": "standalone"
+}

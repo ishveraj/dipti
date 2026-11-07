@@ -1,0 +1,56 @@
+@use '@/theme' as *;
+@use 'sass:map';
+
+#neo-dashboard-navbar {
+    max-width: map.get($navbar-settings, 'dashboard-width');
+    flex: 0 0 map.get($navbar-settings, 'dashboard-width');
+    background: linear-gradient(to bottom,#04070e,#040e1a,#06152a);
+    padding-top: 1rem;
+    padding-bottom: map.get($section-settings, 'mobile-padding-y');
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    .logo {
+        max-width: 150px;
+        max-height: 150px;
+        object-fit: contain;
+        margin-bottom: 1rem;
+    }
+
+    .dashboard-links {
+        * {
+            color: var(--white-100);
+        }
+
+        p {
+            &.small {
+                color: var(--blue-0);
+                font-size: 0.8rem;
+            }
+        }
+
+        a {
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            padding: 0.8rem 1rem;
+            color: var(--white-50);
+            transition: 0.3s color ease, 0.3s background-color ease;
+            margin-bottom: 2px;
+
+            i {
+                font-size: 1.2rem;
+            }
+
+            &.active {
+                color: var(--white-100);
+                background-color: var(--grey-100) !important;
+            }
+
+            &:hover {
+                background-color: var(--grey-50);
+            }
+        }
+    }
+}

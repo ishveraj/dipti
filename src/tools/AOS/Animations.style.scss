@@ -1,0 +1,12 @@
+@use '@/theme' as *;
+
+[data-aos="some-new-effect"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.show {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+

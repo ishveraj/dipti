@@ -1,0 +1,67 @@
+@use '@/theme' as *;
+
+.modal {
+    .modal-content {
+        border: none;
+    }
+
+    .modal-body {
+        padding: 60px 30px;
+    }
+
+    button.close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1000;
+        cursor: pointer;
+        background-color: var(--primary);
+        color: var(--white-100);
+        border: none;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s opacity ease;
+    
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.modal-open {
+    padding-right: 0 !important;
+
+    .navbar {
+        padding-right: 0 !important;
+        margin-right: auto !important;
+
+        .navbar-toggler {
+            margin-right: 0 !important;
+        }
+    }
+    @media only screen and (max-width: $navbar-mobile-breakpoint) {
+        .navbar {
+            padding-right: 15px !important;
+        }
+    }
+}
+.modal-open .modal {
+    z-index: 9999 !important;
+    padding-right: 0 !important;
+}
+
+.modal.modal-full {
+    padding-left: 0 !important;
+    .modal-dialog {
+        max-width: 100% !important;
+        margin: 0 !important;
+
+        .modal-content {
+            min-height: 100vh !important;
+        }
+    }
+}

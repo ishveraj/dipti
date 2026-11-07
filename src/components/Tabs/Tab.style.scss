@@ -1,0 +1,10 @@
+@use '@/theme' as *;
+
+.tab {
+    cursor: pointer;
+    transition: 0.3s color ease;
+
+    &.selected {
+        color: var(--primary);
+    }
+}

@@ -1,0 +1,32 @@
+@use '@/theme' as *;
+
+#notfound1 {
+    height: 90vh;
+
+    .barrier {
+        height: 200px;
+        width: 200px;
+        object-fit: contain;
+        border: 1px solid pink;
+        mask-image: url('./static/icon.svg');
+        -webkit-mask-image : url('./static/icon.svg');
+        background-color: red;
+    }
+    .container {
+        max-height: 100vh;
+        height: 100%;
+    }
+    h1 {
+        color: black;
+    }
+    p {
+        max-width: 700px;
+    }
+    
+    .btn {
+        background-color: #FF7B03;
+        border-radius: 15px;
+        padding: 20px 25px;
+    }
+}
+

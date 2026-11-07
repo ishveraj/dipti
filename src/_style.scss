@@ -1,0 +1,88 @@
+@use '@/theme' as *;
+
+/**
+ * For global effects or general CSS ONLY
+ * IF any styling is unique to a component, create component scss instead
+ */
+
+// Heading
+.display-1 {
+    font-size: clamp(2.8rem, 4.5vw, 5rem);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 3vw, 3.5rem); 
+    line-height: 1.2;
+}
+
+h2, .h2 {
+    font-size: clamp(2.2rem, 4vw, 2.8rem); 
+}
+
+h3, .h3 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem); 
+}
+
+
+// Button
+.btn {
+    color: var(--white-100);
+    background-color: var(--primary);
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    position: relative;
+    transition: 0.3s all ease;
+
+    &.dark {
+        background-color: var(--primary);
+        border: none;
+    }
+
+    &:hover {
+        background-color: var(--red-0);
+    }
+}
+
+
+// Anchor links 
+.alink {
+    color: var(--primary);
+    text-decoration: underline !important;
+
+    &:hover {
+        color: var(--grey-100);
+        text-decoration: underline !important;
+    }
+
+    &.grey {
+        color: var(--grey-100);
+
+        &:hover {
+            color: var(--grey-0);
+        }
+    }
+}
+
+// Rich editor
+.rich-content {
+    h1,h2,h3,h4,p {
+      margin-bottom: 1rem;
+    }
+
+    h1, h2, h3 {
+        strong, em, b, i {
+            font: inherit;
+        }
+    }
+
+    ul,ol {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+    }
+}

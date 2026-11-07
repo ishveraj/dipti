@@ -1,0 +1,36 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "ssr": "node dist/server.js",
+    "start": "vite",
+    "dev": "vite dev",
+    "build-production": "cross-env BUILD_MODE=production node vite.builds/vite.build.js",
+    "build-staging": "cross-env BUILD_MODE=staging node vite.builds/vite.build.js",
+    "serve": "vite preview"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "vite": "^6.1.1",
+    "vite-plugin-solid": "^2.11.2"
+  },
+  "dependencies": {
+    "@lottiefiles/lottie-player": "1.5.7",
+    "@solidjs/meta": "^0.29.4",
+    "@solidjs/router": "^0.8.2",
+    "blueimp-md5": "^2.19.0",
+    "gsap": "^3.12.4",
+    "lenis": "^1.1.18",
+    "sass": "^1.52.1",
+    "solid-js": "^1.4.2",
+    "split-type": "^0.3.4",
+    "swiper": "^12.2.0"
+  },
+  "allowScripts": {
+    "esbuild@0.25.0": true,
+    "@parcel/watcher@2.6.0": true
+  }
+}

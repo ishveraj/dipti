@@ -1,0 +1,16 @@
+@use '@/theme' as *;
+
+.neo-widget-video-scroll {
+  min-height: 100vh;
+  min-height: 100dvh; 
+  position: relative;
+
+    video {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+

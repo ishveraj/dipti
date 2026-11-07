@@ -1,0 +1,190 @@
+@use '@/theme' as *;
+@use 'sass:map';
+
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999 !important;
+    padding: 0;
+    height: map.get($navbar-settings, 'desktop-height');
+    background-color: var(--white-100);
+    transition: 0.3s box-shadow linear;
+    width: 100%;
+
+    &.affix-active {
+        box-shadow: 0 0 50px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+        height: calc( map.get($navbar-settings, 'desktop-height') - 30px );
+    
+        @media only screen and (max-width: $navbar-mobile-breakpoint){
+            height: calc( map.get($navbar-settings, 'mobile-height') - 30px );
+        }
+    }
+
+    .navbar-nav .nav-link {
+        color: map.get($navbar-settings, 'default-link-color');
+        font-size: map.get($navbar-settings, 'font-size');
+        padding-left: map.get($navbar-settings, 'link-padding-left-right');
+        padding-right: map.get($navbar-settings, 'link-padding-left-right');
+        transition: 0.3s all ease;
+        @include font-navigation();
+    }
+
+    .navbar-nav > .nav-item {
+        .nav-link {
+            &.active, &:hover {
+                color: map.get($navbar-settings, 'hover-link-color');
+            }
+
+            &:hover > .nav-link-dropdown {
+                opacity: 1;
+                height: auto;
+                overflow: unset;
+                pointer-events: all;
+            }
+        }
+        
+        &:last-child {
+            .nav-link {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .nav-link-dropdown {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: 0.3s opacity ease;
+        background-color: var(--white-100);
+
+        .nav-link {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0.5rem 1rem;
+        }
+
+        @media only screen and (max-width: $navbar-mobile-breakpoint) {
+            position: relative;
+        }
+    }
+
+    // Close toggle button mobile
+    .navbar-toggler {
+        .i1, .i2, .i3 {
+            transition: 0.3s all ease;
+        }
+
+        .i1 {
+            transform: rotate(45deg);
+            transform-origin: 10% 10%;
+        }
+
+        .i2 {
+            opacity: 0;
+        }
+
+        .i3 {
+            transform: rotate(-45deg);
+            transform-origin: 10% 90%;
+        }
+
+        &.collapsed {
+            .i1 {
+                transform: rotate(0);
+            }
+
+            .i2 {
+                opacity: 1;
+            }
+
+            .i3 {
+                transform: rotate(0);
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding-right: 0;
+        display: none;
+
+        .icon-bar {
+            position: relative;
+            display: block;
+            width: 22px;
+            height: 2px;
+            border-radius: 1px;
+            background-color: var(--primary);
+            margin-top: 4px;
+        }
+    }
+
+    @media only screen and (max-width: $navbar-mobile-breakpoint) {
+        height: map.get($navbar-settings, 'mobile-height');
+
+        .navbar-collapse {
+            top: map.get($navbar-settings, 'mobile-height');
+            position: fixed;
+            width: 100%;
+            left: 0;
+            background-color: map.get($navbar-settings, 'mobile-dropdown-background-color');
+            max-height: calc(100vh - #{ map.get($navbar-settings, 'mobile-height') });
+            overflow: hidden;
+            overflow-y: auto;
+        }
+        .navbar-brand {
+            .logo {
+                height: map.get($navbar-settings, 'mobile-height') - 30px;
+                transition: 0.5s all ease;
+            }
+        }
+        .navbar-anchor {
+          height: 72px;
+          margin-top: -72px;
+        }
+        .navbar-nav > .nav-item {
+            .nav-link {
+                text-align: center;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+            &:last-child .nav-link {
+                padding-right: map.get($navbar-settings, 'link-padding-left-right');
+                padding-bottom: 30px;
+            }
+            &:first-child .nav-link {
+                padding-top: 30px;
+            }
+        }
+        .navbar-toggler {
+            display: block;
+        }
+        .navbar-toggler-icon {
+            background-image: none;
+        }
+    }
+}
+
+#root {
+    &.navbar-space { 
+        padding-top: map.get($navbar-settings, 'desktop-height');
+    }
+
+    @media only screen and (max-width: $navbar-mobile-breakpoint) {
+        &.navbar-space { 
+            padding-top: map.get($navbar-settings, 'mobile-height'); 
+        }
+        cursor: pointer;
+    }
+}
