@@ -32,7 +32,6 @@ export function App({ url, setSchema }) {
     <CSP whiteList={CSPWhiteList}/>
 
     <GlobalContext.Provider value={{ 
-        siteSettings: siteSettings, 
         setSchema: setSchema,
         tabs,
         setTabs

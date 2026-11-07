@@ -9,9 +9,6 @@ g.isNodeApp = VITE_NODE_APP === 'yes' ? true : false;
 
 if ( DEV ){
   g.devToken = VITE_LOCAL_API_TOKEN;
-  if ( !g.devToken ){
-    console.error('Development environment requires an API token. Head over to Webmaster account under Users and create an Application Password to use in .env');
-  }
 }
 
 //* Add event listener

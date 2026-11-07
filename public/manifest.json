@@ -1,13 +1,13 @@
 {
-  "start_url": "/",
-  "name": "Install App",
-  "short_name": "PWA App",
+  "start_url": "/dipti",
+  "name": "Dear Dipti",
+  "short_name": "Dear Dipti",
   "description": "Run this app locally",
   "background_color": "#000000",
   "theme_color": "#212121",
   "icons": [
     {
-      "src": "https://gaboola.com/favicon.png",
+      "src": "https://ishveraj.github.io/dipti/static/defaults/favicon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
