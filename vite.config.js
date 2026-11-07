@@ -24,55 +24,8 @@ export default defineConfig(() => {
       hmr: true, // auto refresh on save (turn off during dev if lots of API calls)
     },
     plugins: [
-      solidPlugin({ ssr: isSSR }),
-      {
-        name: 'dev-start',
-        apply: 'serve',
-        transformIndexHtml(html) {
-          // For nodeJS app
-          if ( process.env.NODE_APP === 'yes' ){
-            return html
-            .replace(/\s*PHP_SSR_INIT\s*/g, '')
-            .replace('PHP_SSR_META_INIT' ,'<!--metatags-->')
-          }
-          // For PHP app
-          else {
-          return html
-            .replace(/\s*PHP_SSR_INIT\s*/g, '')
-            .replace(
-              'PHP_SSR_META_INIT', 
-              `<meta name="description">
-    <meta name="keywords">
-
-    <meta property="og:type" content="website">
-    <meta id="headOGURL" property="og:url">
-    <meta id="headOGSiteName" property="og:site_name">
-    <meta id="headOGTitle" property="og:title">
-    <meta id="headOGDescription" property="og:description">
-    <meta id="headOGImage" property="og:image">
-    <meta id="headOGImageWidth" property="og:image:width">
-    <meta id="headOGImageHeight" property="og:image:height">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site">
-    <meta name="twitter:title">
-    <meta name="twitter:description">
-    <meta name="twitter:image">
-
-    <link rel="icon" sizes="32x32">
-    <link rel="icon" sizes="192x192">
-    <link rel="apple-touch-icon">
-
-    <link rel="canonical">
-
-    <title></title>`);
-          }
-        },
-      }
+      solidPlugin(),
     ],
-    ssr: isSSR ? {
-      noExternal: /./,
-    } : undefined,
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
@@ -82,19 +35,6 @@ export default defineConfig(() => {
       target: 'esnext',
       polyfillDynamicImport: false,
       outDir: 'dist',
-      emptyOutDir: !isSSR,
-      ssr: isSSR,
-      copyPublicDir: isSSR ? false : true,
-      rollupOptions: isSSR
-      ? { 
-        input: 'server.js',
-        output: {
-          format: 'esm',
-          inlineDynamicImports: true,  // ← forces everything into one file
-          entryFileNames: 'server.js',
-        }
-      }
-      : {},
     },
     base: basePath,
     define: {

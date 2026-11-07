@@ -6,8 +6,8 @@
     "ssr": "node dist/server.js",
     "start": "vite",
     "dev": "vite dev",
-    "build-production": "cross-env BUILD_MODE=production node vite.builds/vite.build.js",
-    "build-staging": "cross-env BUILD_MODE=staging node vite.builds/vite.build.js",
+    "build-production": "cross-env BUILD_MODE=production",
+    "build-staging": "cross-env BUILD_MODE=staging",
     "serve": "vite preview"
   },
   "license": "MIT",
