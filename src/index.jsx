@@ -5,7 +5,6 @@ import { lazy } from 'solid-js';
  ** MUST register in backend/App/templates.php
  */ 
 export const RegisteredTemplates = {
-    Home: {component: lazy(() => import('@/pages/Home/Home.jsx'))},
     // Example CPTs
     //Cpt_Blogs: {component: lazy(() => import('@/pages/Cpt_Blogs/Cpt_Blogs.jsx'))},
 };
