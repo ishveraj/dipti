@@ -271,16 +271,16 @@ const seventyReasons = [
     "Haha that would be to do that Hyrox thingy...or the travelling...one is a team based thing, to see how cool we are as a couple haha, the other is just a romantic thing...we can go anywhere, do anything...we are very powerful that way...the things we can do are limitless..."
   ],
   [
-    "If you could only say three words to her right now, what would they be?",
-    "You're my everything..."
-  ],
-  [
     "What is your secret plan to make her smile this week?",
     "Hehe, that would be the gift I bought for her birthday...sadly, it has a stupid return policy, so I'm forced to give it to her earlier...and hence why, I decided to build this app...this is her real birthday gift...and I'll be adding funny stuffs to it from time to time...her own personal space, everytime she misses us...everytime she wants to remember us...anything at all..."
   ],
   [
     "Finish this sentence: 'Dipti, you are mine because...'",
     "Dipti, you are mine forever because my heart, picked you first kikiki...I will always love you more...and everyday, my heart will keep picking you again and again..."
+  ],
+  [
+    "If you could only say three words to her right now, what would they be?",
+    "You're my everything..."
   ],
 ];
 
