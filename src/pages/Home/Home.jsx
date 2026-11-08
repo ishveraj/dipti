@@ -50,7 +50,7 @@ export default function Home(){
   <Aos/>
 
   <Show when={accessPass()} fallback={
-    <section data-aos="zoom-in" data-aos-delay="100">
+    <section data-aos="zoom-in" data-aos-delay="500">
       <div className="container text-center">
         <h1>Nothing...to see here kid...</h1>
       </div>
