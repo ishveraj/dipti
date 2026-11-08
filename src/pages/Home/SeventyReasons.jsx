@@ -163,12 +163,124 @@ const seventyReasons = [
     "I think it would be too rushed or hectic...she has a tendency of not slowing down, rushing into it like she is late for a flight...and I can see her overthinking and spiraling at times...she plans alot for her family, so it means she definitely has qualities to lead, but I guess a home needs to be regulated, calm...outside home, she spends her day working and running things...at least when she comes home, she can turn her mind off...and I would want her to be relaxed at home, not continue running her engine..."
   ],
   [
-    "",
-    ""
+    "What is she the best at in the whole world?",
+    "Hmmm, difficult to say, as she balances it all, she is equally good at baking, dancing and in her career as well...I would say perhaps the quality I see most in her is that people tend to lean on her, perhaps they feel they can rely on her safely and let their worries go...in other words, her ability to nuture others to actually feel safe and vulnerable around her..."
   ],
   [
-    "",
-    ""
+    "What has she taught you?",
+    "Owh a great deal...the most important thing, I would say is to actually love myself...to find the balance between being selfless and selfish...that loving yourself is important, because only through that can you love others better, and putting it that way somehow helped me cope with my inability to see myself first...and its the whole reason I'm getting more and more over confident with the fact that I am the only one in the world capable of loving her the most..."
+  ],
+  [
+    "How has she made you a better man?",
+    "I think it was being transparent...about sharing how I feel, especially when it hurts...being me, I'm used to keeping things to myself, whether its uncomfortable or not, whether it hurts or not, I keep it to myself, because I'm aware I can fix it myself...but she showed me that its not about fixing, rather, it is simply letting her know because she cares...and I can relate with that, because if she kept things to herself, it would definitely bother me too...as men, we tend to always keep things to ourselves, so it is quite important to learn how to share at times, it helps us reflect better and learn too..."
+  ],
+  [
+    "What is the bravest thing you have seen her do?",
+    "Haha, there is too many, but I wasn't there to see this, but she told me she fixed a guy's leg during an accident on the road, and to me, the ability to pause your life, look at another and go out to be involved in theirs, is a very brave thing to do...she was the vanguard during COVID, and well, that speaks volumes already doesn't it..."
+  ],
+  [
+    "What do you admire about how she treats people?",
+    "Hmmm, generally I find her very brutal to people around her, but at the sametime, I notice she listens well...naturally people tend to open more to those who listen...her natural affinity in her, is actually to be kind to others, but how she does it is another story...she can scold someone for taking too much sugar, it can come off very arrogant and bossy, but the motive behind it, is always extremely kind...those who listen will find themselves in the presence of an angel, and those who can't see past her brutality, will probably be offended...not that it bothers her even if it did haha...I admire that about her, her kindness towards others..."
+  ],
+  [
+    "What does she do for the family that goes unnoticed?",
+    "Hmmm, I'm not aware much of this, but I've heard of her planning holidays, managing renovations and even baking...they generally lean on her alot, but I guess as time goes by, people tend to unnotice all this things...in lack of demure, to take things for granted...its only human to do so..."
+  ],
+  [
+    "What does she do better than you, and you hate that?",
+    "That would probably be the fitness thing, she is indeed better at it generally...a little bit...just a little bit...fitter then I am...and she does rub it in my face often...hate is a strong word, I would say she is my rival at this point...and when I beat her, I'll probably ask for a kiss then just to rub it in hahaha..."
+  ],
+  [
+    "What is her best quality that she doesn't give herself credit for?",
+    "Overall, it is everything...as I said, her greatest adversary is herself...and she is extremely pessimistic about things...combine this two, and generally everything she does is never enough...in a way it is good, she strives for more...but at times, celebrating achievements can be toned down as she wouldn't hype over it...she is humble that way, but at times, perhaps just to me, I see the side where she punishes herself more then she needs to..."
+  ],
+  [
+    "What makes her the perfect partner in crime?",
+    "The fact that she loves me, is already a crime on its own haha...and she has mentioned that her love is biased, she will indeed help cover murders if it involves someone she loves but will be extremely skewered over murders if it was someone else...that is an extreme example, but if we tone it down, haha and add her cheekiness to it...well, there you go...the perfect partner for every crime...now time to go prank someone..."
+  ],
+  [
+    "When have you been proudest of her?",
+    "It would be the time she climbed the tower...over 2k steps...in just 40+ mins...that is just such an awesome achievement...and we were still getting to know each other, but I was in such awe of it...the training, the mindset, everything...I was proud of her even before I even knew her so well..."
+  ],
+  [
+    "What is your favourite memory of her?",
+    "Owh...that would be the time we lied down at Straits...it was in the morning...the light was shining so brightly that day...and we just stared at each other...with the light on her, we didn't say anything, but I remember how she looked at me...with such endearing eyes, smile...I can remember it like it was just yesterday..."
+  ],
+  [
+    "Which song reminds you of her?",
+    "Haha, that would be Dive...its a song she shared with me...her favourite line was 'Everytime I fall, I lose it all'...a reference to how she feels everytime she gives herself, she gets hurt...her fear of getting hurt runs deep...but the song is about taking the Dive, despite the fears...and it is exactly what she did...we still tell each other that we are still diving...since everyday we learn something new, everyday is another reason to love more and more...people don't realise that you can continously fall deeper and deeper...the feeling can become more and more intense..."
+  ],
+  [
+    "What is your favourite place you have been together?",
+    "Haha, definitely the first place I saw her, at the Gardens...next to that tree...it is still my favourite spot...there is a certain peace to it, just sitting on the mat, hearing the waves, seeing the wind blow on her hair...and if we are lucky, we get to catch the sun setting or rising...it is truly a magnificent feeling..."
+  ],
+  [
+    "What was your funniest fight?",
+    "Haha, ok...this one..that would be the best Capati fight...I have a pet peeve with this woman, where everytime she makes a statement, a general statement and then makes it in a very arrogant tone, brutal and just sooo sure about it like nothing else is gonna matter...which is what happened, where she said her aunty makes the bestttt...the besttt...capatis on the planet...did it end there? No, she continues to tell me its because her aunty is punjabi...alright, well probably true...but me being me, I just had to tell her that hey, there could be someone who isn't a punjabi who can make good capatis what, and hence...the fight...and well, just to spice things up, I made up a Malay woman in Taiping who happened to make the best...the best...capatis...and well, our friend just couldn't accept it...went on to even challenge me...ahhh, yup I was having a good laugh...I still find it adorable to challenge her once in awhile just to see how she responds..."
+  ],
+  [
+    "What is the best meal you have shared?",
+    "Owh tough one...she takes me to all the good stuffs, and we share all the time...I guess I would say its the sandwich from Karo Karo, its just chef kiss..."
+  ],
+  [
+    "What is an inside joke only you and her understand?",
+    "Haha, that would probably be the Suu-pee-neh and Pro-neh...or when I cross my legs...yup it has some special effects...ehem...cough cough...now...next question..."
+  ],
+  [
+    "Which moment would you replay if you could?",
+    "That would be our 10 days...it was surreal, like a dream...just me and her, I didn't get to see her often, but the small moments I had, were so beautiful...nothing special, just ordinary days, ordinary breakfast, dinner...but somehow it feels so special to me...those simple boring moments..."
+  ],
+  [
+    "What do you love about a lazy day with her?",
+    "Haha, probably off to a cafe for some good coffee, or cookie hunting...that is when she is hungry...if she isn't...well...we probably be snuggling the hours away...it is never enough..."
+  ],
+  [
+    "What is the most spontaneous thing you have ever done with her?",
+    "Owh, not much...everything is planned properly...spontaneous probably just means, instead of doing A, we do B...we are extremely flexible that way, anything goes...but we don't abuse that affinity of ours, we like everything planned as it helps manage our time better...time is extremely important for the both of us, so we tend not to waste it away..."
+  ],
+  [
+    "What was the hardest time you got through with her, and what did it teach you?",
+    "Hmmm...that would be the time I hurt her...I always knew I would hurt her, its expected in relationships, its what brings people together...but this one, was something she already mentioned before...and due to my lack of self love, my fear of losing her, I hurt her...it only showed me that she loves me, more then she probably is aware herself...I saw her show me kindness, again and again...and it rooted me...there was no leaving, there was no backup plans...I was over confident again, that I am going to be hers...and I will spend the rest of my life, loving her the best way I can..."
+  ],
+  [
+    "What adventure do you want to take her on next?",
+    "Owh I would really want to travel somewhere...doesn't have to be far, there are soo many beautiful places here in Malaysia, I really want to get away for a couple of days, go for a hike, try out some local food, hit a hot spring...and perhaps when time allows it, somewhere further...like Europe, or some cold snowy place where she will be forced to stick to me kikiki..."
+  ],
+  [
+    "What do you promise her for this year?",
+    "I didn't make any specifically...but perhaps, it is to be patient...after our 10 days, I've been restless, mind clouded with memento mori at how fragile life is...and it just makes me want to entertain my speed, how quickly I do things...I'm still suprised she didn't get freaked out with how fast I was...but not everything can be rushed...in a way, I promise to be patient...to wait for her as long as she needs me to...to be there for her, even if she chooses otherwise...I know myself well, I've made up my mind about it...I will always be there for this woman..."
+  ],
+  [
+    "Where do you see yourselves in 10 years?",
+    "Hmmm, being the optimistic person that I am, I can already see the family we wanted...I can already tell there will be 2 or maybe 3 small versions of us running around...I can tell she will pursue her career deeper and I would already be rooted in my business...at that point, my eldest child would already be in school...its nothing special, just every couple's love story...but I guess, to us, it is very special to even come that far, looking at how much we are already going through...to even think that we will have a family one day, as simple as it sounds, is a very heavy thing to say...I say that with full over confidence...because I will make it work..."
+  ],
+  [
+    "What is one thing you promise to do better?",
+    "Personally, it would be to listen better...to let her finish her what her intentions are...most of the time, I notice her brutality has more stories to it, but perhaps if I listened more patiently, I would understand better...I have a tendency of telling her certain things are wrong, and well, it usually makes her feel unheard or judged...it is hard to maneuver that, she talks alot, but apparently I talk alot too...so now there is two of us who talk alot, and the listening tends to be skewered haha...its not as serious as it sounds, but I do want to listen to her..."
+  ],
+  [
+    "Which dream of hers do you want to help come true?",
+    "Owh, that would be having a family...pursuing her career wherever she wants to...ensuring her family is still part of her life...the fitness thing (she is just a little bit better)...there is alot, but yeah, I have a lot of things to do haha...to be honest, anything that she wants, I will want to support her all the way..."
+  ],
+  [
+    "What do you want yourselves to do more of?",
+    "Its difficult to answer this question, as it can come off as demanding...the small time that we have, we are already doing so much together...but I guess, for the sake of the question, I would say workout together more? We have not done that much...and perhaps bake? And dance? I haven't done any of this with her..."
+  ],
+  [
+    "What is the first thing on your bucket list you can't wait to tick off?",
+    "Haha that would be to do that Hyrox thingy...or the travelling...one is a team based thing, to see how cool we are as a couple haha, the other is just a romantic thing...we can go anywhere, do anything...we are very powerful that way...the things we can do are limitless..."
+  ],
+  [
+    "If you could only say three words to her right now, what would they be?",
+    "You're my everything..."
+  ],
+  [
+    "What is your secret plan to make her smile this week?",
+    "Hehe, that would be the gift I bought for her birthday...sadly, it has a stupid return policy, so I'm forced to give it to her earlier...and hence why, I decided to build this app...this is her real birthday gift...and I'll be adding funny stuffs to it from time to time...her own personal space, everytime she misses us...everytime she wants to remember us...anything at all..."
+  ],
+  [
+    "Finish this sentence: 'Dipti, you are mine because...'",
+    "Dipti, you are mine forever because my heart, picked you first kikiki...I will always love you more...and everyday, my heart will keep picking you again and again..."
   ],
 ];
 
