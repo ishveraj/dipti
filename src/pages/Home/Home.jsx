@@ -71,7 +71,7 @@ export default function Home(){
             }}</For>
           </h1>
 
-          <div class="mt-5" data-aos="zoom-in" data-aos-delayx={afterIntroDelay + 1500}>
+          <div class="mt-5" data-aos="zoom-in" data-aos-delay={afterIntroDelay + 1500}>
             <div className="row align-items-center justify-content-center">
               <div className="col-lg-4 mt-4 text-center">
                 <ModalTrigger target="seventy-reasons-why" class="col-box">
