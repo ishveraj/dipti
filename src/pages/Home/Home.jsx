@@ -1,9 +1,9 @@
+import { Modal, ModalTrigger } from "@/components/Modals/Modal";
 import { Aos } from "@/tools/AOS/AOS";
 import { Meta } from '@/tools/Meta/Meta';
-import { onCleanup, onMount } from "solid-js";
-import { Modal, ModalTrigger } from "@/components/Modals/Modal";
-import { SeventyReasons } from "./SeventyReasons";
+import { createSignal, onMount } from "solid-js";
 import './Home.style.scss';
+import { SeventyReasons } from "./SeventyReasons";
 
 const introMessages = [
   ['Well, well, well...', 'look what the cat brought in...'],
@@ -23,13 +23,23 @@ export default function Home(){
   const introMessageRandomIndex = Math.floor(Math.random() * introMessages.length);
   let afterIntroDelay = 0;
 
-  //* On page load
+  const [accessPass, setAccessPass] = createSignal();
+
   onMount(() => {
+    (async () => {
+      const pw = prompt("Halt, who goes there...");
+      if (pw === null) return;
 
-  });
+      const res = await fetch("https://projects.gaboola.com/archives/test/test.php", {
+        method: "POST",
+        body: new URLSearchParams({ pw })
+      });
 
-  //* On page leave
-  onCleanup(() => {
+      const text = await res.text();
+
+      if ( text === "ok") setAccessPass(true);
+      return;
+    })();
   });
 
   return <>
@@ -39,37 +49,44 @@ export default function Home(){
   }}/>
   <Aos/>
 
+  <Show when={accessPass()} fallback={
+    <section data-aos="zoom-in" data-aos-delay="100">
+      <div className="container text-center">
+        <h1>Nothing...to see here kid...</h1>
+      </div>
+    </section>
+  }>
+    <div id="page-home">
+      <section id="section-1">
+        <div class="container">
+          <h1 class="text-center">
+            <For each={introMessages[introMessageRandomIndex]}>{(v,i) => {
+              afterIntroDelay = i() === 0 ? null : 2000 * i() - 1000;
 
-  <div id="page-home">
-    <section id="section-1">
-      <div class="container">
-        <h1 class="text-center">
-          <For each={introMessages[introMessageRandomIndex]}>{(v,i) => {
-            afterIntroDelay = i() === 0 ? null : 2000 * i() - 1000;
+              return <>
+                <span class="d-block" data-aos="fade-in" data-aos-delay={afterIntroDelay}>
+                  {introMessages[introMessageRandomIndex][i()]}
+                </span>
+              </>;
+            }}</For>
+          </h1>
 
-            return <>
-              <span class="d-block" data-aos="fade-in" data-aos-delay={afterIntroDelay}>
-                {introMessages[introMessageRandomIndex][i()]}
-              </span>
-            </>;
-          }}</For>
-        </h1>
+          <div class="mt-5" data-aos="zoom-in" data-aos-delayx={afterIntroDelay + 1500}>
+            <div className="row align-items-center justify-content-center">
+              <div className="col-lg-4 mt-4 text-center">
+                <ModalTrigger target="seventy-reasons-why" class="col-box">
+                  <p>70 reasons why me laps you</p>
+                </ModalTrigger>
 
-        <div class="mt-5" data-aos="zoom-in" data-aos-delayx={afterIntroDelay + 1500}>
-          <div className="row align-items-center justify-content-center">
-            <div className="col-lg-4 mt-4 text-center">
-              <ModalTrigger target="seventy-reasons-why" class="col-box">
-                <p>70 reasons why me laps you</p>
-              </ModalTrigger>
-
-              <Modal id="seventy-reasons-why" size="large">
-                <SeventyReasons/> 
-              </Modal>
+                <Modal id="seventy-reasons-why" size="large">
+                  <SeventyReasons/> 
+                </Modal>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
+      </section>
+    </div>
+  </Show>
   </>;
 }
