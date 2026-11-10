@@ -75,7 +75,7 @@ export default function Home(){
             <div className="row align-items-center justify-content-center">
               <div className="col-lg-4 mt-4 text-center">
                 <ModalTrigger target="seventy-reasons-why" class="col-box">
-                  <p>70 reasons why me laps you</p>
+                  <p>Some reasons why me laps you</p>
                 </ModalTrigger>
 
                 <Modal id="seventy-reasons-why" size="large">
