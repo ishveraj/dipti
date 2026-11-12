@@ -4,6 +4,7 @@ import { Meta } from '@/tools/Meta/Meta';
 import { createSignal, onMount } from "solid-js";
 import './Home.style.scss';
 import { SeventyReasons } from "./SeventyReasons";
+import { WheneverYouFeelDown } from "./WheneverYouFeelDown";
 
 const introMessages = [
   ['Well, well, well...', 'look what the cat brought in...'],
@@ -73,13 +74,23 @@ export default function Home(){
 
           <div class="mt-5" data-aos="zoom-in" data-aos-delay={afterIntroDelay + 1500}>
             <div className="row align-items-center justify-content-center">
-              <div className="col-lg-4 mt-4 text-center">
+              <div className="col-lg-4 mt-2 text-center">
                 <ModalTrigger target="seventy-reasons-why" class="col-box">
                   <p>Some reasons why me laps you</p>
                 </ModalTrigger>
 
                 <Modal id="seventy-reasons-why" size="large">
                   <SeventyReasons/> 
+                </Modal>
+              </div>
+
+              <div className="col-lg-4 mt-2 text-center">
+                <ModalTrigger target="whenever-you-feel-down" class="col-box">
+                  <p>Whenever you feel down...</p>
+                </ModalTrigger>
+
+                <Modal id="whenever-you-feel-down" size="large">
+                  <WheneverYouFeelDown/> 
                 </Modal>
               </div>
             </div>
