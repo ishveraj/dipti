@@ -1,4 +1,4 @@
-import { Show, createSignal } from 'solid-js';
+import { g } from '@/utils/Functions';
 import './Home.style.scss';
 
 export function WheneverYouFeelDown(){
@@ -6,6 +6,8 @@ export function WheneverYouFeelDown(){
   return <>
   <div class="neo-widget-whenever-you-feel-down">
     <div data-aos="fade-in">
+      <img src={`${g.base}static/videos/love.webp`} width="200" class="d-block mx-auto"/>
+
       <h2 class="font-bold text-center mb-4">Whenever you feel down...know this...</h2>
 
       <p class="text-center">

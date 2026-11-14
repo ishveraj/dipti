@@ -5,19 +5,45 @@ import { createSignal, onMount } from "solid-js";
 import './Home.style.scss';
 import { SeventyReasons } from "./SeventyReasons";
 import { WheneverYouFeelDown } from "./WheneverYouFeelDown";
+import { g } from "@/utils/Functions";
 
 const introMessages = [
-  ['Well, well, well...', 'look what the cat brought in...'],
-  ['Oh look...', 'somebody finally showed up...', 'I was about to send a search party...'],
-  ['Knock knock...', 'who\'s there?', 'Only the prettiest baby girl I ever had...'],
-  ['Psst...', 'you\'re not supposed to be here...', 'kidding...', 'you\'re the whole reason I built this...'],
-  ['Welcome back, gorgeous...', 'I missed you...'],
-  ['Breaking news...', 'you\'re the best part of this site...', 'obviously...'],
-  ['Ahem...', 'this is a restricted area ma\'am...', 'you\'ll have to bribe me first...'],
-  ['Oh hello trouble...', 'I mean, hello princess...'],
-  ['Well hello there...', 'miss me already?', 'Such a sweetheart aren\'t you...'],
-  ['Access granted...', 'because obviously, who else would it be...'],
-  ['Warning...', 'you\'re about to be spoiled...', 'adored...', 'tickled...', 'and I\'m going to have zero regrets about it...'],
+  [
+    ['Well, well, well...', 'look what the cat brought in...'], 
+    `${g.base}static/videos/sayang-3.webm`
+  ],
+  [
+    ['Oh look...', 'somebody finally showed up...', 'I was about to send a search party...'], 
+    `${g.base}static/videos/sayang-2.webm`
+  ],
+  [
+    ['Knock knock...', 'who\'s there?', 'Only the prettiest baby girl I ever had...'], 
+    `${g.base}static/videos/knock.webm`
+  ],
+  [
+    ['Psst...', 'you\'re not supposed to be here...', 'kidding...', 'you\'re the whole reason I built this...'],
+    `${g.base}static/videos/cool-2.webm`
+  ],
+  [
+    ['Welcome back, gorgeous...', 'I missed you...'],
+    `${g.base}static/videos/piles-3.webm`
+  ],
+  [
+    ['Breaking news...', 'you\'re the best part of this site...', 'obviously...'],
+    `${g.base}static/videos/cool-3.webm`
+  ],
+  [
+    ['Ahem...', 'this is a restricted area ma\'am...', 'you\'ll have to bribe me first...'],
+    `${g.base}static/videos/cool-4.webm`
+  ],
+  [
+    ['Oh hello trouble...', 'I mean, hello princess...'],
+    `${g.base}static/videos/me.webm`
+  ],
+  [
+    ['Well hello there...', 'miss me already?', 'Such a sweetheart aren\'t you...'],
+    `${g.base}static/videos/cool.webm`
+  ],
 ];
 
 export default function Home(){
@@ -28,6 +54,8 @@ export default function Home(){
 
   onMount(() => {
     (async () => {
+      setAccessPass(true);
+      return false;
       const pw = prompt("Halt, who goes there...");
       if (pw === null) return;
 
@@ -60,13 +88,15 @@ export default function Home(){
     <div id="page-home">
       <section id="section-1">
         <div class="container">
+          <video src={introMessages[introMessageRandomIndex][1]} autoplay loop muted playsinline width="200" class="d-block mx-auto" data-aos="fade-in"/>
+
           <h1 class="text-center">
-            <For each={introMessages[introMessageRandomIndex]}>{(v,i) => {
+            <For each={introMessages[introMessageRandomIndex][0]}>{(v,i) => {
               afterIntroDelay = i() === 0 ? null : 2000 * i() - 1000;
 
               return <>
                 <span class="d-block" data-aos="fade-in" data-aos-delay={afterIntroDelay}>
-                  {introMessages[introMessageRandomIndex][i()]}
+                  {introMessages[introMessageRandomIndex][0][i()]}
                 </span>
               </>;
             }}</For>
