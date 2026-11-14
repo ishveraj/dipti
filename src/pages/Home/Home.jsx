@@ -54,6 +54,8 @@ export default function Home(){
 
   onMount(() => {
     (async () => {
+      setAccessPass(true);
+      return;
       const pw = prompt("Halt, who goes there...");
       if (pw === null) return;
 
@@ -86,7 +88,7 @@ export default function Home(){
     <div id="page-home">
       <section id="section-1">
         <div class="container">
-          <img src={introMessages[introMessageRandomIndex][1]} width="200" class="d-block mx-auto" data-aos="fade-in"/>
+          <img src={introMessages[introMessageRandomIndex][1]} width="200" class="d-block mx-auto mb-3" data-aos="fade-in"/>
 
           <h1 class="text-center">
             <For each={introMessages[introMessageRandomIndex][0]}>{(v,i) => {
