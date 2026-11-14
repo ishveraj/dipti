@@ -69,7 +69,7 @@ const seventyReasons = [
   ],
   [
     "Which of her looks makes you behave immediately?",
-    "Well, try saying Omale semme jakkanu sarukku...let 5 seconds go...yup, thats the look...next question..."
+    "Well, try saying Omale semme jokkanu sarukku...let 5 seconds go...yup, thats the look...next question..."
   ],
   [
     "What is the sweetest thing she has ever done for you?",
