@@ -54,8 +54,6 @@ export default function Home(){
 
   onMount(() => {
     (async () => {
-      setAccessPass(true);
-      return;
       const pw = prompt("Halt, who goes there...");
       if (pw === null) return;
 
