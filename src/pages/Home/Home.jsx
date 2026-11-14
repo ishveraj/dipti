@@ -54,8 +54,6 @@ export default function Home(){
 
   onMount(() => {
     (async () => {
-      setAccessPass(true);
-      return false;
       const pw = prompt("Halt, who goes there...");
       if (pw === null) return;
 
@@ -73,8 +71,8 @@ export default function Home(){
 
   return <>
   <Meta data={{
-    title: `Dear Dipti...This One's For You`,
-    description: `Dipti's personal corner of the internet. Built by Bubu, for Pluplue, with more suu-pee-nehs loading...`,
+    title: `Dear Dipti...`,
+    description: `Built by Bubu...for Pluplue...with more suu-pee-nehs loading...`,
   }}/>
   <Aos/>
 
