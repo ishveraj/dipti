@@ -10,39 +10,39 @@ import { g } from "@/utils/Functions";
 const introMessages = [
   [
     ['Well, well, well...', 'look what the cat brought in...'], 
-    `${g.base}static/videos/sayang-3.webm`
+    `${g.base}static/videos/sayang-3.webp`
   ],
   [
     ['Oh look...', 'somebody finally showed up...', 'I was about to send a search party...'], 
-    `${g.base}static/videos/sayang-2.webm`
+    `${g.base}static/videos/sayang-2.webp`
   ],
   [
     ['Knock knock...', 'who\'s there?', 'Only the prettiest baby girl I ever had...'], 
-    `${g.base}static/videos/knock.webm`
+    `${g.base}static/videos/knock.webp`
   ],
   [
     ['Psst...', 'you\'re not supposed to be here...', 'kidding...', 'you\'re the whole reason I built this...'],
-    `${g.base}static/videos/cool-2.webm`
+    `${g.base}static/videos/cool-2.webp`
   ],
   [
     ['Welcome back, gorgeous...', 'I missed you...'],
-    `${g.base}static/videos/piles-3.webm`
+    `${g.base}static/videos/piles-3.webp`
   ],
   [
     ['Breaking news...', 'you\'re the best part of this site...', 'obviously...'],
-    `${g.base}static/videos/cool-3.webm`
+    `${g.base}static/videos/cool-3.webp`
   ],
   [
     ['Ahem...', 'this is a restricted area ma\'am...', 'you\'ll have to bribe me first...'],
-    `${g.base}static/videos/cool-4.webm`
+    `${g.base}static/videos/cool-4.webp`
   ],
   [
     ['Oh hello trouble...', 'I mean, hello princess...'],
-    `${g.base}static/videos/me.webm`
+    `${g.base}static/videos/me.webp`
   ],
   [
     ['Well hello there...', 'miss me already?', 'Such a sweetheart aren\'t you...'],
-    `${g.base}static/videos/cool.webm`
+    `${g.base}static/videos/cool.webp`
   ],
 ];
 
@@ -86,7 +86,7 @@ export default function Home(){
     <div id="page-home">
       <section id="section-1">
         <div class="container">
-          <video src={introMessages[introMessageRandomIndex][1]} autoplay loop muted playsinline width="200" class="d-block mx-auto" data-aos="fade-in"/>
+          <img src={introMessages[introMessageRandomIndex][1]} width="200" class="d-block mx-auto" data-aos="fade-in"/>
 
           <h1 class="text-center">
             <For each={introMessages[introMessageRandomIndex][0]}>{(v,i) => {
