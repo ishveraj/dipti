@@ -6,7 +6,7 @@ export function WheneverYouFeelDown(){
   return <>
   <div class="neo-widget-whenever-you-feel-down">
     <div data-aos="fade-in">
-      <video src={`${g.base}static/videos/love-2.webp`} autoplay loop muted playsinline width="200" class="d-block mx-auto mb-4"/>
+      <img src={`${g.base}static/videos/love-2.webp`} width="200" class="d-block mx-auto mb-4"/>
 
       <h2 class="font-bold text-center mb-4">Whenever you feel down...know this...</h2>
 

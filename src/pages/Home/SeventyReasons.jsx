@@ -291,7 +291,7 @@ export function SeventyReasons(){
   return <>
   <div class="neo-widget-seventy-reasons">
     <Show when={currentQuestion() === null}>
-      <video src={`${g.base}static/videos/piles.webp`} autoplay loop muted playsinline width="200" class="d-block mx-auto" data-aos="fade-in"/>
+      <img src={`${g.base}static/videos/piles.webp`} width="200" class="d-block mx-auto" data-aos="fade-in"/>
 
       <h3 class="text-center">A stranger kidnapped me the other day and said if I answered some questions truthfully, he will give me some half boiled eggs...neither the eggs nor the stranger were seen since then...did anyone send you any eggs by chance?</h3>
     </Show>
